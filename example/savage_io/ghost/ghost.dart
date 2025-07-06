@@ -68,7 +68,7 @@ void main() {
             .toString(),
         stroke: "black",
         strokeWidth: "2",
-        strokeLinejoin: StrokeLineJoin.round,
+        strokeLinejoin: StrokeLinejoin.round,
         fill: "url(#gradient)",
         children: [LinearGradient(x1: "-10", x2: "-10")],
       ),

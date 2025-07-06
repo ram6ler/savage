@@ -2,7 +2,7 @@ abstract class StrokeLinecap {
   static const butt = "butt", round = "round", square = "square";
 }
 
-abstract class StrokeLineJoin {
+abstract class StrokeLinejoin {
   static const arcs = "arcs",
       bevel = "bevel",
       miter = "miter",

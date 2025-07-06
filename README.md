@@ -101,7 +101,7 @@ ghost.writeToFile("images/ghost.svg");
 
 Now, if we open *images/ghost.svg*, we get:
 
-![](images/ghost.svg)
+![](images/ghost.png)
 
 The *savage_io* package also contains a *parseSVG* function that allows us to reverse-build the above structure from an SVG file. For example:
 

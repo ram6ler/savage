@@ -103,7 +103,7 @@ void main() {
           stroke: "red",
           strokeWidth: "80",
           strokeLinecap: StrokeLinecap.round,
-          strokeLineJoin: StrokeLineJoin.miter,
+          strokeLinejoin: StrokeLinejoin.miter,
         ),
       ],
     );
