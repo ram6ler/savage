@@ -99,7 +99,9 @@ At this point we can get save the SVG document to file:
 ghost.writeToFile("images/ghost.svg");
 ```
 
-Now, if we open *images/ghost.svg*, we can see the saved svg document.
+Now, if we open *images/ghost.svg*, we can get:
+
+![](images/ghost.svg)
 
 The *savage_io* package also contains a *parseSVG* function that allows us to reverse-build the above structure from an SVG file. For example:
 
