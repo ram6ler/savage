@@ -1,0 +1,7 @@
+<svg height="200" viewBox="0 0 220 220" width="200" xmlns="http://www.w3.org/2000/svg">
+  <filter id="displace">
+    <feTurbulence baseFrequency="0.05" numOctaves="2" result="turbulence" type="turbulence" />
+    <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="50" xChannelSelector="R" yChannelSelector="G" />
+  </filter>
+  <circle cx="100" cy="100" filter="url(#displace)" r="100" />
+</svg>

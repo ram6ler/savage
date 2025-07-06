@@ -1,0 +1,609 @@
+A:
+  mixins:
+    BaseAttributes
+    ReferenceAttributes
+
+
+Animate:
+  mixins:
+    BaseAttributes
+    AnimationAttributes
+
+AnimateMotion:
+  svgName: animateMotion
+  mixins:
+    BaseAttributes
+    AnimationAttributes
+  attributes:
+    path:
+      docs: The path directions.
+      completer: PathBuilder
+
+AnimateTransform:
+  svgName: animateTransform
+  mixins:
+    BaseAttributes
+    AnimationAttributes
+  attributes:
+    type:
+      docs: The transformation type.
+
+Circle:
+  mixins:
+    BaseAttributes
+    StrokeAttributes
+    FillAttributes
+    CenterAttributes
+    RadiusAttributes
+    TransformAttributes
+    ClipMaskAttributes
+
+ClipPath:
+  svgName: clipPath
+  mixins:
+    BaseAttributes
+
+Defs:
+  mixins:
+    BaseAttributes
+
+Desc:
+  mixins:
+    BaseAttributes
+
+Ellipse:
+  mixins:
+    BaseAttributes
+    StrokeAttributes
+    FillAttributes
+    CenterAttributes
+    TransformAttributes
+    ClipMaskAttributes
+  attributes:
+    rx:
+      docs: The horizontal radius.
+    ry:
+      docs: The vertical radius
+
+FEBlend:
+  svgName: feBlend
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    PositionAttributes
+    DimensionAttributes
+  attributes:
+    input2:
+      representation: in2
+      docs: Filter input.
+      completer: FilterInput
+    mode:
+      docs: The blend mode.
+      completer: BlendMode
+
+FEColorMatrix:
+  svgName: feColorMatrix
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    PositionAttributes
+    DimensionAttributes
+  attributes:
+    matrixType:
+      representation: type
+      docs: Values input type.
+      completer: FilterMatrixType
+    values:
+      docs: Values for the specified matrix type.
+
+FEComponentTransfer:
+  svgName: feComponentTransfer
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    PositionAttributes
+    DimensionAttributes
+
+FEComposite:
+  svgName: feComposite
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    PositionAttributes
+    DimensionAttributes
+    FilterOperatorAttributes
+  attributes:
+    input2:
+      representation: in2
+      docs: Filter input.
+      completer: FilterInput
+    k1:
+      docs: Value used for arithmetic operator.
+    k2:
+      docs: Value used for arithmetic operator.
+    k3:
+      docs: Value used for arithmetic operator.
+    k4:
+      docs: Value used for arithmetic operator.
+
+FEConvolveMatrix:
+  svgName: feConvolveMatrix
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    PositionAttributes
+    DimensionAttributes
+    FilterEdgeModeAttributes
+  attributes:
+    order:
+      docs: The matrix order.
+    kernelMatrix:
+      representation: kernelMatrix
+      docs: The convolution matrix.
+    divisor:
+      docs: The convolution divisor.
+    bias:
+      docs: The convolution bias.
+    targetX:
+      representation: targetX
+      docs: The horizontal positioning of the convolution.
+    targetY:
+      representation: targetY
+      docs: The vertical positioning of the convolution.
+    preserveAlpha:
+      representation: preserveAlpha
+      docs: Whether to preserve the alpha setting (*true* or *false*).
+
+FEDiffuseLighting:
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    PositionAttributes
+    DimensionAttributes
+    FilterSurfaceScaleAttributes
+    LightingAttributes
+  attributes:
+    diffuseConstant:
+      representation: diffuseConstant
+      docs: Diffuse lighting constant.
+
+FEDisplacementMap:
+  svgName: feDisplacementMap
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    PositionAttributes
+    DimensionAttributes
+  attributes:
+    input2:
+      representation: in2
+      docs: Filter input.
+      completer: FilterInput
+    scale:
+      docs: Displacement scale factor.
+    xChannelSelector:
+      representation: xChannelSelector
+      docs: Which color channel from in2 to use to displace the pixels in in along the x-axis; *R*, *G*, *B* or (default) *A*. 
+    yChannelSelector:
+      representation: yChannelSelector
+      docs: Which color channel from in2 to use to displace the pixels in in along the y-axis; *R*, *G*, *B* or (default) *A*. 
+
+FEDistantLight:
+  svgName: feDistantLight
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    PositionAttributes
+    DimensionAttributes
+    LightingAttributes
+  attributes:
+    azimuth:
+      docs: The direction angle for the light source on the XY plane (clockwise), in degrees from the x axis.
+    elevation:
+      docs: The direction angle for the light source from the XY plane towards the Z-axis, in degrees.
+
+FEDropShadow:
+  svgName: feDropShadow
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    OffsetAttributes
+    PositionAttributes
+    DimensionAttributes
+    FilterStandardDeviationAttributes
+
+FEFlood:
+  svgName: feFlood
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    PositionAttributes
+    DimensionAttributes
+  attributes:
+    floodColor:
+      representation: flood-color
+      docs: The color with which to flood the current filter subregion.
+    floodOpacity:
+      representation: flood-opacity
+      docs: The opacity of the color with which to flood the current filter subregion.
+
+FEFuncA:
+  svgName: feFuncA
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    FilterFunctionAttributes
+
+FEFuncB:
+  svgName: feFuncB
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    FilterFunctionAttributes
+
+FEFuncG:
+  svgName: feFuncG
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    FilterFunctionAttributes
+
+FEFuncR:
+  svgName: feFuncR
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    FilterFunctionAttributes
+
+FEGaussianBlur:
+  svgName: feGaussianBlur
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    PositionAttributes
+    DimensionAttributes
+    FilterStandardDeviationAttributes
+    FilterEdgeModeAttributes
+
+FEImage:
+  svgName: feImage
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    PositionAttributes
+    DimensionAttributes
+    ReferenceAttributes
+
+FEMerge:
+  svgName: feMerge
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    PositionAttributes
+    DimensionAttributes
+
+FEMergeNode:
+  svgName: feMergeNode
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    PositionAttributes
+    DimensionAttributes
+
+FEMorphology:
+  svgName: feMorphology
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    PositionAttributes
+    DimensionAttributes
+    FilterOperatorAttributes
+  attributes:
+    radius:
+      docs: The radius for the operation.
+
+FEOffset:
+  svgName: feOffset
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    PositionAttributes
+    DimensionAttributes
+    OffsetAttributes
+
+FEPointLight:
+  svgName: fePointLight
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    PositionAttributes
+    DimensionAttributes
+    FilterZAttributes
+
+FESpecularLighting:
+  svgName: feSpecularLighting
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    PositionAttributes
+    DimensionAttributes
+    FilterSurfaceScaleAttributes
+    FilterSpecularExponentAttributes
+    LightingAttributes
+  attributes:
+    specularConstant:
+      representation: specularConstant
+      docs: The ratio of reflection of the specular lighting.
+
+FESpotLight:
+  svgName: feSpotLight
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    PositionAttributes
+    DimensionAttributes
+    FilterZAttributes
+    FilterSpecularExponentAttributes
+    LightingAttributes
+  attributes:
+    pointsAtX:
+      representation: pointsAtX
+      docs: The *x* coordinate of the spotlight's focus.
+    pointsAtY:
+      representation: pointsAtY
+      docs: The *y* coordinate of the spotlight's focus.
+    pointsAtZ:
+      representation: pointsAtZ
+      docs: The *z* coordinate of the spotlight's focus.
+    limitingConeAngle:
+      representation: limitingConeAngle
+      docs: The angle in degrees between the spot light axis and the spot light cone.
+
+FETile:
+  svgName: feTile
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    PositionAttributes
+    DimensionAttributes
+
+FETurbulence:
+  svgName: feTurbulence
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    PositionAttributes
+    DimensionAttributes
+  attributes:
+    baseFrequency:
+      representation: baseFrequency
+      docs: The base frequency parameter for the noise function.
+    numOctaves:
+      representation: numOctaves
+      docs: The number of octaves for the noise function.
+    seed:
+      docs: The starting number for the pseudorandom number generator.
+    stitchTiles:
+      representation: stitchTiles
+      docs: How the Perlin Noise tiles behave at the border.
+      completer: StitchTiles
+    turbulenceType:
+      representation: type
+      docs: Whether the filter primitive should perform a noise or turbulence function.
+      completer: TurbulenceType
+
+Filter:
+  mixins:
+    BaseAttributes
+    FilterAttributes
+    PositionAttributes
+    DimensionAttributes
+    ReferenceAttributes
+  attributes:
+    primitiveUnits:
+      representation: primitiveUnits
+      docs: Defines the coordinate system for the attributes *x*, *y*, *width* and *height*.
+      completer: FilterUnits
+
+G:
+  mixins:
+    BaseAttributes
+    StrokeAttributes
+    FillAttributes
+    TransformAttributes
+    ClipMaskAttributes
+
+Image:
+  mixins:
+    PositionAttributes
+    DimensionAttributes
+    ReferenceAttributes
+
+Line:
+  mixins:
+    BaseAttributes
+    StrokeAttributes
+    TransformAttributes
+    ClipMaskAttributes
+    LineAttributes
+    MarkerAttributes
+
+LinearGradient:
+  svgName: linearGradient
+  mixins:
+    BaseAttributes
+    LineAttributes
+
+Marker:
+  mixins:
+    BaseAttributes
+    ReferenceCoordinateAttributes
+  attributes:
+    markerHeight:
+      representation: markerHeight
+      docs: Height of the marker.
+    markerWidth:
+      representation: markerWidth
+      docs: Width of the marker.
+    orient:
+      docs: The orientation of the marker; an angle, "auto" or "auto-start-reverse".
+
+Mask:
+  mixins:
+    BaseAttributes
+
+MPath:
+  mixins:
+    BaseAttributes
+    ReferenceAttributes
+
+Path:
+  mixins:
+    BaseAttributes
+    StrokeAttributes
+    FillAttributes
+    TransformAttributes
+    MarkerAttributes
+  attributes:
+    d:
+      docs: The path directions.
+      completer: PathBuilder
+
+Pattern:
+  mixins:
+    BaseAttributes
+    PositionAttributes
+    DimensionAttributes
+    TransformAttributes
+    ViewBoxAttributes
+    ReferenceAttributes
+  attributes:
+    patternUnits:
+      representation: patternUnits
+      docs: Which coordinate system to use for the geometry properties.
+    patternContentUnits:
+      representation: patternContentUnits
+      docs: Which coordinate system to use for the contents of the pattern.
+    patternTransform:
+      representation: patternTransform
+      docs: A list of transform operations applied to the pattern.
+      completer: TransformBuilder
+    
+Polygon:
+  mixins:
+    BaseAttributes
+    StrokeAttributes
+    FillAttributes
+    PointsAttributes
+    TransformAttributes
+    ClipMaskAttributes
+    MarkerAttributes
+
+Polyline:
+  mixins:
+    BaseAttributes
+    StrokeAttributes
+    FillAttributes
+    PointsAttributes
+    TransformAttributes
+    ClipMaskAttributes
+    MarkerAttributes
+
+RadialGradient:
+  svgName: radialGradient
+  mixins:
+    BaseAttributes
+    CenterAttributes
+    RadiusAttributes
+  attributes:
+    fx:
+      docs: The x position of the radial gradient center.
+    fy:
+      docs: The y position of the radial gradient center.
+
+Rect:
+  mixins:
+    BaseAttributes
+    StrokeAttributes
+    FillAttributes
+    PositionAttributes
+    DimensionAttributes
+    TransformAttributes
+    ClipMaskAttributes
+  attributes:
+    rx:
+      docs: The x radius of the corners.
+    ry:
+      docs: The y radius of the corners.
+
+Script:
+  mixins:
+    BaseAttributes
+
+Stop:
+  mixins:
+    BaseAttributes
+    PositionAttributes
+    DimensionAttributes
+  attributes:
+    offset:
+      docs: The position of the gradient stop.
+    stopColor:
+      representation: stop-color
+      docs: The color of the gradient stop.
+
+SVG:
+  mixins:
+    BaseAttributes
+    PositionAttributes
+    DimensionAttributes
+    TransformAttributes
+    ViewBoxAttributes
+
+Symbol:
+  mixins:
+    BaseAttributes
+    PositionAttributes
+    DimensionAttributes
+    ReferenceCoordinateAttributes
+    ViewBoxAttributes
+
+Text:
+  mixins:
+    BaseAttributes
+    StrokeAttributes
+    FillAttributes
+    PositionAttributes
+    TransformAttributes
+    TextAttributes
+    OffsetAttributes
+    ClipMaskAttributes
+
+TextPath:
+  svgName: textPath
+  mixins:
+    BaseAttributes
+    StrokeAttributes
+    FillAttributes
+    PositionAttributes
+    TransformAttributes
+    TextAttributes
+    ReferenceAttributes
+  attributes:
+    startOffset:
+      representation: startOffset
+      docs: The offset of the text.
+
+Title:
+  mixins:
+    BaseAttributes
+
+Use:
+  mixins:
+    BaseAttributes
+    StrokeAttributes
+    FillAttributes
+    PositionAttributes
+    TransformAttributes
+    ReferenceAttributes
+    ClipMaskAttributes

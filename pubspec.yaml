@@ -1,0 +1,12 @@
+name: savage
+description: A simple interface for creating and manipulating svg objects.
+version: 0.1.0
+# repository: https://github.com/my_org/my_repo
+# issue_tracker:
+
+environment:
+  sdk: ^3.6.1
+dependencies:
+  web: ^1.1.0
+dev_dependencies:
+  yaml: ^3.1.3

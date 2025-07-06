@@ -1,0 +1,245 @@
+AnimationAttributes:
+  attributes:
+    attributeName:
+      representation: attributeName
+      docs: The name of the parent attribute to change.
+    begin:
+      docs: The delay before the animation begins.
+    dur:
+      docs: The duration of the animation.
+    from:
+      docs: The start value of the parent attribute.
+    to:
+      docs: The end value of the parent attribute.
+    repeatCount:
+      representation: repeatCount
+      docs: The number of animations or *indefinite* to repeat.
+
+BaseAttributes:
+  attributes:
+    id:
+      docs: The id of the element.
+    tabIndex:
+      representation: tabIndex
+      docs: The tab index of the element.
+    lang:
+      docs: Primary language for element content.
+    filter:
+      docs: Filter to apply.
+
+CenterAttributes:
+  attributes:
+    cx:
+      docs: The center x coordinate.
+    cy:
+      docs: The center y coordinate.
+
+ClipMaskAttributes:
+  attributes:
+    clipPath:
+      representation: clip-path
+      docs: Reference to element used to clip.
+    mask:
+      docs: Reference to element used to mask.
+
+DimensionAttributes:
+  attributes:
+    width:
+      docs: The width of the element.
+    height:
+      docs: The height of the element.
+
+FillAttributes:
+  attributes:
+    fill:
+      docs: The fill color of the element.
+    fillOpacity:
+      representation: fill-opacity
+      docs: The fill opacity of the element.
+      completer: FillRule
+
+FilterAttributes:
+  attributes:
+    input:
+      representation: in
+      docs: Filter input.
+      completer: FilterInput
+    result:
+      docs: A name for the output of a filter.
+    filterUnits:
+      representation: filterUnits
+      docs: Defines the coordinate system for the attributes *x*, *y*, *width* and *height*.
+      completer: FulterUnits
+
+FilterEdgeModeAttributes:
+  attributes:
+    edgeMode:
+      representation: edgeMode
+      docs: How to deal with edges.
+      completer: FilterEdgeMode
+
+FilterFunctionAttributes:
+  attributes:
+    functionType:
+      representation: type
+      docs: Filter function type.
+      completer: FilterFunctionType
+    tableValues:
+      representation: tableValues
+      docs: When *type* is set to *table*, a lookup table.
+    slope:
+      docs: When *type*  is set to *linear*, the slope of the linear function.
+    amplitude:
+      docs: When *type*  is set to *gamma*, the amplitude of the gamma function.
+    exponent:
+      docs: When *type*  is set to *gamma*, the exponent of the gamma function.
+    offset:
+      docs: When *type*  is set to *gamma*, the offset of the gamma function.
+
+FilterOperatorAttributes:
+  attributes:
+    operator:
+      docs: Porter-Duff compositing operator.
+
+FilterSpecularExponentAttributes:
+  attributes:
+    specularExponent:
+      representation: specularExponent
+      docs: Tthe focus for the light source.
+
+FilterStandardDeviationAttributes:
+  attributes:
+    stdDeviation:
+      representation: stdDeviation
+      docs: The standard deviation used by the filter.
+
+FilterSurfaceScaleAttributes:
+  attributes:
+    surfaceScale:
+      representation: surfaceScale
+      docs: Diffuse lighting surface scale.
+
+FilterZAttributes:
+  attributes:
+    z:
+      docs: The *z* coordinate of the light source.
+
+
+LightingAttributes:
+  attributes:
+    lightingColor:
+      representation: lighting-color
+      docs: The color of the light source.
+    
+
+LineAttributes:
+  attributes:
+    x1:
+      docs: The start x coordinate.
+    y1:
+      docs: The start y coordinate.
+    x2:
+      docs: The end x coordinate.
+    y2:
+      docs: The end y coordinate.
+
+MarkerAttributes:
+  attributes:
+    markerStart:
+      representation: marker-start
+      docs: The link to the marker to be used at the start of the stroke path.
+    markerMid:
+      representation: marker-mid
+      docs: The link to the marker to be used at the midpoint of the stroke path.
+    markerEnd:
+      representation: marker-end
+      docs: The link to the marker to be used at the end of the stroke path.
+
+OffsetAttributes:
+  attributes:
+    dx:
+      docs: Horizontal offset.
+    dy:
+      docs: Vertical offset.
+
+PointsAttributes:
+  attributes:
+    points:
+      docs: The positions of the vertices.
+
+PositionAttributes:
+  attributes:
+    x:
+      docs: The x coordinate of the top left corner.
+    y:
+      docs: The y coordinate of the top left corner.
+
+RadiusAttributes:
+  attributes:
+    r:
+      docs: Radius of the circle.
+
+ReferenceAttributes:
+  attributes:
+    href:
+      docs: Reference to element used.
+
+ReferenceCoordinateAttributes:
+  attributes:
+    refX:
+      representation: refX
+      docs: The x coordinate of the reference point.
+    refY:
+      representation: refY
+      docs: The y coordinate of the reference point.
+
+StrokeAttributes:
+  attributes:
+    stroke:
+      docs: The stroke color.
+    strokeWidth:
+      representation: stroke-width
+      docs: The stroke width.
+    strokeOpacity:
+      representation: stroke-opacity
+      docs: The stroke opacity.
+    strokeDasharray:
+      representation: stroke-dasharray
+      docs: The stroke dash-array.
+    strokeLinecap:
+      representation: stroke-linecap
+      docs: The stroke linecap type.
+      completer: StrokeLinecap
+    strokeLinejoin:
+      representation: stroke-linejoin
+      docs: The stroke linejoin type.
+      completer: StrokeLinejoin
+
+TextAttributes:
+  attributes:
+    textLength:
+      docs: The length the text is scaled to be.
+    lengthAdjust:
+      docs: How the text is scaled.
+      completer: LengthAdjust
+    fontSize:
+      representation: font-size
+      docs: Font size.
+    rotate:
+      docs: Rotates characters (in degrees).
+
+TransformAttributes:
+  attributes:
+    transform:
+      docs: A list of transformations to apply.
+      completer: TransformBuilder
+
+ViewBoxAttributes:
+  attributes:
+    viewBox:
+      representation: viewBox
+      docs: The view box.
+      completer: ViewBox
+    preserveAspectRatio:
+      representation: preserveAspectRatio
+      docs: Whether to perform uniform scaling.
